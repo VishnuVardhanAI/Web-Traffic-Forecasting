@@ -6,7 +6,7 @@ This repository contains the code, data‑processing pipelines, and experiment n
 Accurately predicting traffic spikes is mission‑critical for any content or e‑commerce platform. Even a few hundred milliseconds of extra latency can translate into lost ad revenue or abandoned carts. By modeling 18 months of daily page‑view counts across English Wikipedia, the project demonstrates how an ensemble can outperform either model in isolation, providing a practical blueprint for capacity planning, marketing timing, and content scheduling.
 
 ## Data set
-The raw data—released for a Kaggle competition by Google—contains daily views for ~145 k Wikipedia articles (July 2015 – Dec 2016). For this study, I aggregated **all English‑language pages** into a single univariate series, filled true missing days with zeros, and resampled to enforce a daily frequency. Exploratory analysis confirmed clear seasonality plus occasional exogenous spikes (e.g., viral news events) citeturn0file0.
+The raw data—released for a Kaggle competition by Google—contains daily views for ~145 k Wikipedia articles (July 2015 – Dec 2016). For this study, I aggregated **all English‑language pages** into a single univariate series, filled true missing days with zeros, and resampled to enforce a daily frequency. Exploratory analysis confirmed clear seasonality plus occasional exogenous spikes (e.g., viral news events).
 
 ## Modeling approach
 1. **Seasonal ARIMA (SARIMA)** via *pmdarima*’s auto‑grid‑search captures linear trends and seasonality.
